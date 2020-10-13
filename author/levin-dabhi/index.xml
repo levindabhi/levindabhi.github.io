@@ -5,12 +5,1060 @@
     <link>https://levindabhi.github.io/author/levin-dabhi/</link>
       <atom:link href="https://levindabhi.github.io/author/levin-dabhi/index.xml" rel="self" type="application/rss+xml" />
     <description>Levin Dabhi</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 12 Oct 2020 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://levindabhi.github.io/images/icon_hu7a184a27f485c4872d8a0ad92564bac0_236618_512x512_fill_lanczos_center_2.png</url>
       <title>Levin Dabhi</title>
       <link>https://levindabhi.github.io/author/levin-dabhi/</link>
     </image>
+    
+    <item>
+      <title>Generating different styles from stylegan</title>
+      <link>https://levindabhi.github.io/post/generating-different-styles/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>https://levindabhi.github.io/post/generating-different-styles/</guid>
+      <description>&lt;p&gt;Blending of different models in stylegan was introduced by &lt;a href=&#34;https://www.justinpinkney.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Justin Pinkney&lt;/a&gt; in his post: &lt;a href=&#34;https://www.justinpinkney.com/stylegan-network-blending&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StyleGAN network blending&lt;/a&gt;. The basic idea proposed in by him is swapping layers between two models. A base model trained on any dataset is blended with another model which is fine-tuned on the base model. For blending, few layers from the base model are swapped with the same layers of the fine-tuned model or vice-versa.&lt;/p&gt;
+&lt;p&gt;This lets you control what type of features you want from each model. Here in post &lt;a href=&#34;https://www.justinpinkney.com/ukiyoe-yourself&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ukiyo-e Yourself&lt;/a&gt;, Justin swapped higher resolution layers from stylegan2 trained on FFHQ dataset with higher resolution layers from model fine-tuned on Ukiyo-e photos. Here low-level features like pose, eyes, nose and other details are from FFHQ model and high-level features like texture, skin colour is from a fine-tuned model.&lt;/p&gt;
+&lt;p&gt;After Justin open-sourced his &lt;a href=&#34;https://colab.research.google.com/drive/1tputbmA9EaXs9HL9iO21g7xN7jz_Xrko?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;colab notebook&lt;/a&gt; to blend different model of stylegan2, people tried many different styles and got interesting results. Here are some of the blended models details with few results.&lt;/p&gt;
+&lt;h1 id=&#34;painting&#34;&gt;&lt;strong&gt;Painting&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Dataset: &lt;a href=&#34;https://github.com/NVlabs/metfaces-dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MetFaces&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://twitter.com/ak92501&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AK&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467373879?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+  
+&lt;/br&gt;
+Here is output of model blended from different resolutions.
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-first-one-is-from-ffhq-model-followed-by-model-blended-from-128x128-32x32-and-4x4-resolution&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/painting-blending_hu355cd9be36cc6b4d52bf3ee7b67f2557_6396492_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;First one is from FFHQ model, followed by model blended from 128x128, 32x32 and 4x4 resolution&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/painting-blending_hu355cd9be36cc6b4d52bf3ee7b67f2557_6396492_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;4100&#34; height=&#34;1025&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    First one is from FFHQ model, followed by model blended from 128x128, 32x32 and 4x4 resolution
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Lower resolutions layer are taken from model trained on FFHQ while higher resolution layers are from model fine-tuned on Met Faces.&lt;br&gt;
+&lt;/br&gt;
+Below are some of the cherry pick results.
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/p2_hu6a05f5bacff0501580b857100ae467b3_2635276_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/p2_hu6a05f5bacff0501580b857100ae467b3_2635276_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/p3_huacd96a249b1a00c45f247a7befa1bed6_2779079_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/p3_huacd96a249b1a00c45f247a7befa1bed6_2779079_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/p5_hu64bea97f530ccbb3860bf09b6e3e6d93_2736108_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/p5_hu64bea97f530ccbb3860bf09b6e3e6d93_2736108_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;cartoon&#34;&gt;&lt;strong&gt;Cartoon&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Dataset: Cartoon images&lt;/li&gt;
+&lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://linktr.ee/Norod78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Doron Adler&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467443035?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+  
+&lt;/br&gt;
+Here is output of model blended from different resolutions.
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-first-one-is-from-ffhq-model-followed-by-model-blended-from-64x64-16x16-and-4x4-resolution&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/cartoon-blending_hu0ffa407d05dc299a15b65bb26810235f_4422008_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;First one is from FFHQ model, followed by model blended from 64x64, 16x16 and 4x4 resolution&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/cartoon-blending_hu0ffa407d05dc299a15b65bb26810235f_4422008_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;4088&#34; height=&#34;1020&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    First one is from FFHQ model, followed by model blended from 64x64, 16x16 and 4x4 resolution
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Lower resolutions layer are taken from model trained on FFHQ while higher resolution layers are from model fine-tuned on cartoon images.&lt;br&gt;
+&lt;/br&gt;
+Below are some of the cherry pick results.
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/t1_hu180ff6d4e9a283c6e9f54da28ff475f4_2778695_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/t1_hu180ff6d4e9a283c6e9f54da28ff475f4_2778695_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/t4_hua89ddd074ee27ed1e1f532fec0550661_2702893_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/t4_hua89ddd074ee27ed1e1f532fec0550661_2702893_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/t5_hu04fb84644125d2d2578e3f87c1107cc7_2907277_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/t5_hu04fb84644125d2d2578e3f87c1107cc7_2907277_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;comic-face&#34;&gt;&lt;strong&gt;Comic face&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Dataset: Comic and Monster faces&lt;/li&gt;
+&lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://linktr.ee/Norod78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Doron Adler&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467396406?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+  
+&lt;/br&gt;
+Here is output of model blended from different resolutions.
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-first-one-is-from-ffhq-model-followed-by-model-blended-from-64x64-16x16-and-4x4-resolution&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/comic-blending_huca314a3b16ae8b6f97f121ef99eba85e_5063965_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;First one is from FFHQ model, followed by model blended from 64x64, 16x16 and 4x4 resolution&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/comic-blending_huca314a3b16ae8b6f97f121ef99eba85e_5063965_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;4100&#34; height=&#34;1018&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    First one is from FFHQ model, followed by model blended from 64x64, 16x16 and 4x4 resolution
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Lower resolutions layer are taken from model trained on FFHQ while higher resolution layers are from model fine-tuned on comic images.&lt;br&gt;
+&lt;/br&gt;
+Below are some of the cherry pick results.
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/c1_hub03d30d46653f1e71678a6acac1d4218_2446486_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/c1_hub03d30d46653f1e71678a6acac1d4218_2446486_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/c3_hu0dfd45a011495d720cfb3f3902a40e8b_2539183_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/c3_hu0dfd45a011495d720cfb3f3902a40e8b_2539183_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/c5_huaf21c1a34285072bb8195264ff2f8eab_2779320_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/c5_huaf21c1a34285072bb8195264ff2f8eab_2779320_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;wikiart&#34;&gt;&lt;strong&gt;WikiArt&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Dataset: WikiArt&lt;/li&gt;
+&lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://twitter.com/pbaylies&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Peter Baylies&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467428527?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+  
+&lt;/br&gt;
+Here is output of model blended from different resolutions.
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-first-one-is-from-ffhq-model-followed-by-model-blended-from-128x128-64x64-and-4x4-resolution&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/wikiart-blending_hu03d912df810337a6a9d7590e5f61528c_5358576_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;First one is from FFHQ model, followed by model blended from 128x128, 64x64 and 4x4 resolution&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/wikiart-blending_hu03d912df810337a6a9d7590e5f61528c_5358576_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;4092&#34; height=&#34;1023&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    First one is from FFHQ model, followed by model blended from 128x128, 64x64 and 4x4 resolution
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Lower resolutions layer are taken from model trained on FFHQ while higher resolution layers are from model fine-tuned on wikiArt images.&lt;br&gt;
+&lt;/br&gt;
+Below are some of the cherry pick results.
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/a2_hubb0e3de3d0da3af5f09e47f4abb45731_3594673_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/a2_hubb0e3de3d0da3af5f09e47f4abb45731_3594673_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/a3_hu17e17aa93c5dc08f4fed8abc7809e8ee_3458625_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/a3_hu17e17aa93c5dc08f4fed8abc7809e8ee_3458625_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/a4_hud917abb9eff6353e15ff7e1a023df658_3614821_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/a4_hud917abb9eff6353e15ff7e1a023df658_3614821_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;monster-face&#34;&gt;&lt;strong&gt;Monster Face&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Dataset: WoWFaces&lt;/li&gt;
+&lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://linktr.ee/Norod78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Doron Adler&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467432089?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+  
+&lt;/br&gt;
+Here is output of model blended from different resolutions.
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-first-one-is-from-ffhq-model-followed-by-model-blended-from-64x64-16x16-and-8x8-resolution&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/wow-blending_hua44ea5129145448961eaa5e8af3d269d_4754595_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;First one is from FFHQ model, followed by model blended from 64x64, 16x16 and 8x8 resolution&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/wow-blending_hua44ea5129145448961eaa5e8af3d269d_4754595_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;4116&#34; height=&#34;1028&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    First one is from FFHQ model, followed by model blended from 64x64, 16x16 and 8x8 resolution
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+ Lower resolutions layer are taken from model trained on FFHQ while higher resolution layers are from model fine-tuned on WOWFaces images.&lt;br&gt;
+&lt;/br&gt;
+Below are some of the cherry pick results.
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/w1_huc253f89bc8458616e738e2eee2d2f0ad_2537507_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/w1_huc253f89bc8458616e738e2eee2d2f0ad_2537507_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/w3_hu2a691198510dcd8798e08dbddd25ba2f_2498306_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/w3_hu2a691198510dcd8798e08dbddd25ba2f_2498306_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/w4_hu0fbbe462d574fe0604b7cc74bfa5841e_2603519_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/w4_hu0fbbe462d574fe0604b7cc74bfa5841e_2603519_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;furby-toys&#34;&gt;&lt;strong&gt;Furby Toys&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Dataset: Furby Images&lt;/li&gt;
+&lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://linktr.ee/Norod78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Doron Adler&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467426517?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+  
+&lt;/br&gt;
+Here is output of model blended from different resolutions.
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-first-one-is-from-ffhq-model-followed-by-model-blended-from-256x256-64x64-and-8x8-resolution&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/furby-blending_hu9b5b4cd05e4fb914ad269d9c208aaee2_4708963_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;First one is from FFHQ model, followed by model blended from 256x256, 64x64 and 8x8 resolution&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/furby-blending_hu9b5b4cd05e4fb914ad269d9c208aaee2_4708963_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;4088&#34; height=&#34;1022&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    First one is from FFHQ model, followed by model blended from 256x256, 64x64 and 8x8 resolution
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+Lower resolutions layer are taken from model trained on FFHQ while higher resolution layers are from model fine-tuned on furby toy images.&lt;br&gt;
+&lt;/br&gt;
+Below are some of the cherry pick results.
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/f2_hu776cc1e8b13a136405722819e2f667cc_2994800_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/f2_hu776cc1e8b13a136405722819e2f667cc_2994800_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/f3_hued3bb437ce742bd42e81f7c6b14b04c6_2987769_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/f3_hued3bb437ce742bd42e81f7c6b14b04c6_2987769_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-different-styles/f4_hu4f7a11605a2274946a327925816edb41_2862718_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-different-styles/f4_hu4f7a11605a2274946a327925816edb41_2862718_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2048&#34; height=&#34;1024&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h5 id=&#34;i-will-be-adding-a-few-more-styles-when-i-will-get-time-and-resources-for-fine-tuning-on-more-datasets-have-a-look-after-a-few-days&#34;&gt;I will be adding a few more styles when I will get time and resources for fine-tuning on more datasets. Have a look after a few days.&lt;/h5&gt;
+&lt;h1 id=&#34;some-cool-results&#34;&gt;&lt;strong&gt;Some cool results&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;interpolation-of-few-aiml-researchers-into-different-styles&#34;&gt;Interpolation of few AI/ML researchers into different styles&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/466084019?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;/br&gt;
+Projected image of each resarcher into FFHQ latent space to find the closest latent vector. Obtained vector is then inputed into a blended model of the style domain.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;interpolation-of-few-actors-and-actress-into-different-styles&#34;&gt;Interpolation of few actors and actress into different styles&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467691761?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;/br&gt;
+Projected image of each actor/actress into FFHQ latent space to find the closest latent vector. Obtained vector is then inputed into a blended model of the style domain.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&#34;exploration-of-cartoon-latent-space-with-music&#34;&gt;Exploration of cartoon latent space with music&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This looks so amazing. Visualizing &lt;a href=&#34;https://twitter.com/Norod78?ref_src=twsrc%5Etfw&#34;&gt;@Norod78&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/Buntworthy?ref_src=twsrc%5Etfw&#34;&gt;@Buntworthy&lt;/a&gt; &amp;#39;s &lt;a href=&#34;https://twitter.com/hashtag/toonify?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#toonify&lt;/a&gt; with music effect. Sync in the middle is so perfect. &lt;br&gt;&lt;br&gt;(Turn on sound if you haven&amp;#39;t ;)) &lt;a href=&#34;https://t.co/UL4H3RlVZi&#34;&gt;pic.twitter.com/UL4H3RlVZi&lt;/a&gt;&lt;/p&gt;&amp;mdash; Levin Dabhi (@DabhiLevin) &lt;a href=&#34;https://twitter.com/DabhiLevin/status/1314588673669697541?ref_src=twsrc%5Etfw&#34;&gt;October 9, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+Used &amp;lsquo;Culture Shock&amp;rsquo; stylegan visualizer with some modifications.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;🐦&lt;a href=&#34;https://twitter.com/DabhiLevin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Thank you for reading, if you want to comment or have any suggestions feel free to ping me on twitter.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
   </channel>
 </rss>
