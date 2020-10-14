@@ -762,8 +762,8 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>Blending of different models in stylegan was introduced by <a href="https://www.justinpinkney.com/" target="_blank" rel="noopener">Justin Pinkney</a> in his post: <a href="https://www.justinpinkney.com/stylegan-network-blending" target="_blank" rel="noopener">StyleGAN network blending</a>. The basic idea proposed in by him is swapping layers between two models. A base model trained on any dataset is blended with another model which is fine-tuned on the base model. For blending, few layers from the base model are swapped with the same layers of the fine-tuned model or vice-versa.</p>
-<p>This lets you control what type of features you want from each model. Here in post <a href="https://www.justinpinkney.com/ukiyoe-yourself" target="_blank" rel="noopener">Ukiyo-e Yourself</a>, Justin swapped higher resolution layers from stylegan2 trained on FFHQ dataset with higher resolution layers from model fine-tuned on Ukiyo-e photos. Here low-level features like pose, eyes, nose and other details are from FFHQ model and high-level features like texture, skin colour is from a fine-tuned model.</p>
+      <p>Blending of different models in stylegan was first introduced by <a href="https://www.justinpinkney.com/" target="_blank" rel="noopener">Justin Pinkney</a> in his post: <a href="https://www.justinpinkney.com/stylegan-network-blending" target="_blank" rel="noopener">StyleGAN network blending</a>. The fundamental idea he proposed was was swapping layers between two models. A base model trained on any dataset is blended with another model which is fine-tuned on the base model. For blending, few layers from the base model are swapped with the same layers of the fine-tuned model or vice-versa.</p>
+<p>This lets one control what type of features one want from each model. Here in the post <a href="https://www.justinpinkney.com/ukiyoe-yourself" target="_blank" rel="noopener">Ukiyo-e Yourself</a>, Justin swapped higher resolution layers from stylegan2 trained on FFHQ dataset with higher resolution layers from model fine-tuned on Ukiyo-e photos. Here low-level features like pose, eyes, nose and other details are from FFHQ model and high-level features like texture, skin colour is from a fine-tuned model.</p>
 <p>After Justin open-sourced his <a href="https://colab.research.google.com/drive/1tputbmA9EaXs9HL9iO21g7xN7jz_Xrko?usp=sharing" target="_blank" rel="noopener">colab notebook</a> to blend different model of stylegan2, people tried many different styles and got interesting results. Here are some of the blended models details with few results.</p>
 <h1 id="painting"><strong>Painting</strong></h1>
 <ul>
@@ -1766,7 +1766,7 @@ Below are some of the cherry pick results.
 
 </figure>
 </p>
-<h5 id="i-will-be-adding-a-few-more-styles-when-i-will-get-time-and-resources-for-fine-tuning-on-more-datasets-have-a-look-after-a-few-days">I will be adding a few more styles when I will get time and resources for fine-tuning on more datasets. Have a look after a few days.</h5>
+<h5 id="will-be-updating-this-post-once-i-fine-tune-on-more-datasets-have-a-look-after-a-few-days">Will be updating this post once I fine-tune on more datasets. Have a look after a few days.</h5>
 <h1 id="some-cool-results"><strong>Some cool results</strong></h1>
 <ul>
 <li>
@@ -1799,6 +1799,11 @@ Projected image of each actor/actress into FFHQ latent space to find the closest
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Used &lsquo;Culture Shock&rsquo; stylegan visualizer with some modifications.</p>
+<h1 id="updates"><strong>Updates</strong></h1>
+<p><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Out on arxiv, submitted to neurips creativity workshop (cc <a href="https://twitter.com/elluba?ref_src=twsrc%5Etfw">@elluba</a>), work done with <a href="https://twitter.com/Norod78?ref_src=twsrc%5Etfw">@Norod78</a> <a href="https://t.co/afkOiAXj95">https://t.co/afkOiAXj95</a></p>&mdash; Justin (@Buntworthy) <a href="https://twitter.com/Buntworthy/status/1315918169534537728?ref_src=twsrc%5Etfw">October 13, 2020</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Justin and Doron submitted this idea at Neurips creativity workshop.</p>
 <ul>
 <li>🐦<a href="https://twitter.com/DabhiLevin" target="_blank" rel="noopener">Thank you for reading, if you want to comment or have any suggestions feel free to ping me on twitter.</a></li>
 </ul>
