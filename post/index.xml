@@ -25,12 +25,21 @@
 &lt;li&gt;Dataset: &lt;a href=&#34;https://github.com/NVlabs/metfaces-dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MetFaces&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://twitter.com/ak92501&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AK&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467373879?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
   
+=======
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467373879?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
   
 &lt;/br&gt;
 Here is output of model blended from different resolutions.
@@ -192,12 +201,21 @@ Below are some of the cherry pick results.
 &lt;li&gt;Dataset: Cartoon images&lt;/li&gt;
 &lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://linktr.ee/Norod78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Doron Adler&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467443035?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
   
+=======
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467443035?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
   
 &lt;/br&gt;
 Here is output of model blended from different resolutions.
@@ -359,12 +377,21 @@ Below are some of the cherry pick results.
 &lt;li&gt;Dataset: Comic and Monster faces&lt;/li&gt;
 &lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://linktr.ee/Norod78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Doron Adler&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467396406?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
   
+=======
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467396406?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
   
 &lt;/br&gt;
 Here is output of model blended from different resolutions.
@@ -526,12 +553,21 @@ Below are some of the cherry pick results.
 &lt;li&gt;Dataset: WikiArt&lt;/li&gt;
 &lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://twitter.com/pbaylies&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Peter Baylies&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467428527?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
   
+=======
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467428527?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
   
 &lt;/br&gt;
 Here is output of model blended from different resolutions.
@@ -693,12 +729,21 @@ Below are some of the cherry pick results.
 &lt;li&gt;Dataset: WoWFaces&lt;/li&gt;
 &lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://linktr.ee/Norod78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Doron Adler&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467432089?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
   
+=======
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467432089?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
   
 &lt;/br&gt;
 Here is output of model blended from different resolutions.
@@ -859,12 +904,21 @@ Below are some of the cherry pick results.
 &lt;li&gt;Dataset: Furby Images&lt;/li&gt;
 &lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://linktr.ee/Norod78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Doron Adler&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467426517?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
   
+=======
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467426517?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
   
 &lt;/br&gt;
 Here is output of model blended from different resolutions.
@@ -1028,9 +1082,15 @@ Below are some of the cherry pick results.
 &lt;h3 id=&#34;interpolation-of-few-aiml-researchers-into-different-styles&#34;&gt;Interpolation of few AI/ML researchers into different styles&lt;/h3&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/466084019?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
+=======
+&lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/466084019?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
 
 &lt;/br&gt;
 Projected image of each resarcher into FFHQ latent space to find the closest latent vector. Obtained vector is then inputed into a blended model of the style domain.&lt;/p&gt;
@@ -1039,9 +1099,15 @@ Projected image of each resarcher into FFHQ latent space to find the closest lat
 &lt;h3 id=&#34;interpolation-of-few-actors-and-actress-into-different-styles&#34;&gt;Interpolation of few actors and actress into different styles&lt;/h3&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467691761?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
+=======
+&lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467691761?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
 
 &lt;/br&gt;
 Projected image of each actor/actress into FFHQ latent space to find the closest latent vector. Obtained vector is then inputed into a blended model of the style domain.&lt;/p&gt;

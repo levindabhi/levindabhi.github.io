@@ -17,20 +17,34 @@
       <link>https://levindabhi.github.io/post/generating-different-styles/</link>
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
       <guid>https://levindabhi.github.io/post/generating-different-styles/</guid>
+<<<<<<< HEAD
+      <description>&lt;p&gt;Blending of different models in stylegan was first introduced by &lt;a href=&#34;https://www.justinpinkney.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Justin Pinkney&lt;/a&gt; in his post: &lt;a href=&#34;https://www.justinpinkney.com/stylegan-network-blending&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StyleGAN network blending&lt;/a&gt;. The fundamental idea he proposed was was swapping layers between two models. A base model trained on any dataset is blended with another model which is fine-tuned on the base model. For blending, few layers from the base model are swapped with the same layers of the fine-tuned model or vice-versa.&lt;/p&gt;
+&lt;p&gt;This lets one control what type of features one want from each model. Here in the post &lt;a href=&#34;https://www.justinpinkney.com/ukiyoe-yourself&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ukiyo-e Yourself&lt;/a&gt;, Justin swapped higher resolution layers from stylegan2 trained on FFHQ dataset with higher resolution layers from model fine-tuned on Ukiyo-e photos. Here low-level features like pose, eyes, nose and other details are from FFHQ model and high-level features like texture, skin colour is from a fine-tuned model.&lt;/p&gt;
+=======
       <description>&lt;p&gt;Blending of different models in stylegan was introduced by &lt;a href=&#34;https://www.justinpinkney.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Justin Pinkney&lt;/a&gt; in his post: &lt;a href=&#34;https://www.justinpinkney.com/stylegan-network-blending&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StyleGAN network blending&lt;/a&gt;. The basic idea proposed in by him is swapping layers between two models. A base model trained on any dataset is blended with another model which is fine-tuned on the base model. For blending, few layers from the base model are swapped with the same layers of the fine-tuned model or vice-versa.&lt;/p&gt;
 &lt;p&gt;This lets you control what type of features you want from each model. Here in post &lt;a href=&#34;https://www.justinpinkney.com/ukiyoe-yourself&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ukiyo-e Yourself&lt;/a&gt;, Justin swapped higher resolution layers from stylegan2 trained on FFHQ dataset with higher resolution layers from model fine-tuned on Ukiyo-e photos. Here low-level features like pose, eyes, nose and other details are from FFHQ model and high-level features like texture, skin colour is from a fine-tuned model.&lt;/p&gt;
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
 &lt;p&gt;After Justin open-sourced his &lt;a href=&#34;https://colab.research.google.com/drive/1tputbmA9EaXs9HL9iO21g7xN7jz_Xrko?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;colab notebook&lt;/a&gt; to blend different model of stylegan2, people tried many different styles and got interesting results. Here are some of the blended models details with few results.&lt;/p&gt;
 &lt;h1 id=&#34;painting&#34;&gt;&lt;strong&gt;Painting&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Dataset: &lt;a href=&#34;https://github.com/NVlabs/metfaces-dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MetFaces&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://twitter.com/ak92501&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AK&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467373879?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
   
+=======
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467373879?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
   
 &lt;/br&gt;
 Here is output of model blended from different resolutions.
@@ -192,12 +206,21 @@ Below are some of the cherry pick results.
 &lt;li&gt;Dataset: Cartoon images&lt;/li&gt;
 &lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://linktr.ee/Norod78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Doron Adler&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467443035?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
   
+=======
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467443035?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
   
 &lt;/br&gt;
 Here is output of model blended from different resolutions.
@@ -359,12 +382,21 @@ Below are some of the cherry pick results.
 &lt;li&gt;Dataset: Comic and Monster faces&lt;/li&gt;
 &lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://linktr.ee/Norod78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Doron Adler&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467396406?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
   
+=======
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467396406?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
   
 &lt;/br&gt;
 Here is output of model blended from different resolutions.
@@ -526,12 +558,21 @@ Below are some of the cherry pick results.
 &lt;li&gt;Dataset: WikiArt&lt;/li&gt;
 &lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://twitter.com/pbaylies&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Peter Baylies&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467428527?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
   
+=======
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467428527?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
   
 &lt;/br&gt;
 Here is output of model blended from different resolutions.
@@ -693,12 +734,21 @@ Below are some of the cherry pick results.
 &lt;li&gt;Dataset: WoWFaces&lt;/li&gt;
 &lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://linktr.ee/Norod78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Doron Adler&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467432089?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
   
+=======
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467432089?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
   
 &lt;/br&gt;
 Here is output of model blended from different resolutions.
@@ -859,12 +909,21 @@ Below are some of the cherry pick results.
 &lt;li&gt;Dataset: Furby Images&lt;/li&gt;
 &lt;li&gt;Fine-tuned by: &lt;a href=&#34;https://linktr.ee/Norod78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Doron Adler&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467426517?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
   
+=======
+&lt;p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467426517?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+  
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
   
 &lt;/br&gt;
 Here is output of model blended from different resolutions.
@@ -1021,16 +1080,26 @@ Below are some of the cherry pick results.
 
 &lt;/figure&gt;
 &lt;/p&gt;
+<<<<<<< HEAD
+&lt;h5 id=&#34;will-be-updating-this-post-once-i-fine-tune-on-more-datasets-have-a-look-after-a-few-days&#34;&gt;Will be updating this post once I fine-tune on more datasets. Have a look after a few days.&lt;/h5&gt;
+=======
 &lt;h5 id=&#34;i-will-be-adding-a-few-more-styles-when-i-will-get-time-and-resources-for-fine-tuning-on-more-datasets-have-a-look-after-a-few-days&#34;&gt;I will be adding a few more styles when I will get time and resources for fine-tuning on more datasets. Have a look after a few days.&lt;/h5&gt;
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
 &lt;h1 id=&#34;some-cool-results&#34;&gt;&lt;strong&gt;Some cool results&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;h3 id=&#34;interpolation-of-few-aiml-researchers-into-different-styles&#34;&gt;Interpolation of few AI/ML researchers into different styles&lt;/h3&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/466084019?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
+=======
+&lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/466084019?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
 
 &lt;/br&gt;
 Projected image of each resarcher into FFHQ latent space to find the closest latent vector. Obtained vector is then inputed into a blended model of the style domain.&lt;/p&gt;
@@ -1039,9 +1108,15 @@ Projected image of each resarcher into FFHQ latent space to find the closest lat
 &lt;h3 id=&#34;interpolation-of-few-actors-and-actress-into-different-styles&#34;&gt;Interpolation of few actors and actress into different styles&lt;/h3&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+<<<<<<< HEAD
 &lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/467691761?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
+=======
+&lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/467691761?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
 
 &lt;/br&gt;
 Projected image of each actor/actress into FFHQ latent space to find the closest latent vector. Obtained vector is then inputed into a blended model of the style domain.&lt;/p&gt;
@@ -1054,6 +1129,14 @@ Projected image of each actor/actress into FFHQ latent space to find the closest
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 Used &amp;lsquo;Culture Shock&amp;rsquo; stylegan visualizer with some modifications.&lt;/p&gt;
+<<<<<<< HEAD
+&lt;h1 id=&#34;updates&#34;&gt;&lt;strong&gt;Updates&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;Out on arxiv, submitted to neurips creativity workshop (cc &lt;a href=&#34;https://twitter.com/elluba?ref_src=twsrc%5Etfw&#34;&gt;@elluba&lt;/a&gt;), work done with &lt;a href=&#34;https://twitter.com/Norod78?ref_src=twsrc%5Etfw&#34;&gt;@Norod78&lt;/a&gt; &lt;a href=&#34;https://t.co/afkOiAXj95&#34;&gt;https://t.co/afkOiAXj95&lt;/a&gt;&lt;/p&gt;&amp;mdash; Justin (@Buntworthy) &lt;a href=&#34;https://twitter.com/Buntworthy/status/1315918169534537728?ref_src=twsrc%5Etfw&#34;&gt;October 13, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+
+Justin and Doron submitted this idea at Neurips creativity workshop.&lt;/p&gt;
+=======
+>>>>>>> 6a44d793a3b04d439be05215ac61a85c4e3f63a4
 &lt;ul&gt;
 &lt;li&gt;🐦&lt;a href=&#34;https://twitter.com/DabhiLevin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Thank you for reading, if you want to comment or have any suggestions feel free to ping me on twitter.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
