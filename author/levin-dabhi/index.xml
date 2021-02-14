@@ -5,12 +5,242 @@
     <link>https://levindabhi.github.io/author/levin-dabhi/</link>
       <atom:link href="https://levindabhi.github.io/author/levin-dabhi/index.xml" rel="self" type="application/rss+xml" />
     <description>Levin Dabhi</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 12 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 07 Feb 2021 21:56:38 +0530</lastBuildDate>
     <image>
       <url>https://levindabhi.github.io/images/icon_hu7a184a27f485c4872d8a0ad92564bac0_236618_512x512_fill_lanczos_center_2.png</url>
       <title>Levin Dabhi</title>
       <link>https://levindabhi.github.io/author/levin-dabhi/</link>
     </image>
+    
+    <item>
+      <title>Generating Amongus Characters</title>
+      <link>https://levindabhi.github.io/post/generating-amongus-characters/</link>
+      <pubDate>Sun, 07 Feb 2021 21:56:38 +0530</pubDate>
+      <guid>https://levindabhi.github.io/post/generating-amongus-characters/</guid>
+      <description>&lt;p&gt;After one of my &lt;a href=&#34;https://twitter.com/DabhiLevin/status/1355241279765028874?s=20&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tweet&lt;/a&gt; went semi-viral, I motivated myself to put together the results of my stylegan2-ADA experiment in this post. Adding augmentation in discriminator of stylegan2 was cherry on the cake if one wants to train stylegan2 for the limited number of images. &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&#34;https://arxiv.org/abs/2006.06676&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StyleganADA paper&lt;/a&gt; authors explored small datasets with around 2000 to 1500 images. I decided to find the lower limit and trained on a few hundred images.&lt;/p&gt;
+&lt;p&gt;I trained on three categories namely teddy bear faces, amongus characters, lego images. I used the original stylegan2-ADA repo TensorFlow version for training.
+Main points that make the training successful without mode collapse are&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Right Initial point&lt;/strong&gt;
+Fine-tuning from weight file which is close to your data helps a lot&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Augmentation Strength&lt;/strong&gt;
+If your dataset contains a few hundred images it better to start with high &lt;a href=&#34;https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/training/augment.py#L31&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;augment strength&lt;/a&gt; and keep &lt;a href=&#34;https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L540&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;target&lt;/a&gt; low to ramp up augment strength speedily.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Learning rate and Gamma&lt;/strong&gt;
+Its better to explore few values &lt;a href=&#34;https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L162&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learning rate&lt;/a&gt; and &lt;a href=&#34;https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L534&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gamma&lt;/a&gt; before starting full training. Also, try different values when mode collapse occurs.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Below are details of a dataset, weight file link and results of each category. Hope you have a fun time watching results!&lt;/p&gt;
+&lt;h1 id=&#34;teddy-bear-face&#34;&gt;&lt;strong&gt;Teddy Bear face&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Dataset: &lt;a href=&#34;https://github.com/levindabhi/teddy-bear-dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Teddy bear dataset&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;No of Images: 637&lt;/li&gt;
+&lt;li&gt;pkl file link: &lt;a href=&#34;https://drive.google.com/uc?id=1sabVOgLiuOEs12hwP1ju5MX3WOaykWFL&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;google drive&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is latent space exploration
+&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/509455270?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;Randomly picked sample
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-randomly-picked-samples&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-amongus-characters/teddy-grid_huc724c1b4c141f6bda40f1da2874ba209_4296685_2000x2000_fit_q90_lanczos.jpg&#34; data-caption=&#34;Randomly picked samples&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-amongus-characters/teddy-grid_huc724c1b4c141f6bda40f1da2874ba209_4296685_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;6144&#34; height=&#34;4096&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Randomly picked samples
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;amongus-characters&#34;&gt;&lt;strong&gt;AmongUS Characters&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Dataset: Scrapped from &lt;a href=&#34;https://www.citypng.com/search?q=among&amp;#43;us&amp;#43;png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;citypng.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;No of Images: 203&lt;/li&gt;
+&lt;li&gt;pkl file link: &lt;a href=&#34;https://drive.google.com/uc?id=16xmjDSAsnYe4r_3BzTJR43NF7fLIWUH-&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;google drive&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/509517141?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-randomly-picked-samples&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-amongus-characters/amongus-grid_hue6ce280e31d150feda090612e75167b5_2814646_2000x2000_fit_q90_lanczos.jpg&#34; data-caption=&#34;Randomly picked samples&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-amongus-characters/amongus-grid_hue6ce280e31d150feda090612e75167b5_2814646_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;6144&#34; height=&#34;4096&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Randomly picked samples
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-style-mixing-examples&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-amongus-characters/amongus-stylemix_hu31bca6e4a3b5e39b42abbf02d4b1edac_9064904_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Style Mixing examples&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-amongus-characters/amongus-stylemix_hu31bca6e4a3b5e39b42abbf02d4b1edac_9064904_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;4096&#34; height=&#34;4096&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Style Mixing examples
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/512202396?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+Above video is generated from &lt;a href=&#34;https://gist.github.com/rolux/48f1da6cf2bc6ca5833dbacbf852b348&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Culture Shock&lt;/a&gt; with modifications. Music is from &lt;a href=&#34;https://www.youtube.com/watch?v=z5LS4kqJjKo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this youtube video&lt;/a&gt;.&lt;/p&gt;
+&lt;h1 id=&#34;lego-images&#34;&gt;&lt;strong&gt;Lego images&lt;/strong&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Dataset: Scrapped from &lt;a href=&#34;https://brickset.com/minifigs/category-Spider-Man&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;brickset.com&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;No of Images: 31&lt;/li&gt;
+&lt;li&gt;pkl file link: &lt;a href=&#34;https://drive.google.com/uc?id=1RBkUXCZQqekZQLdgMdE6pboGm3_kyOrH&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;google drive&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Failure case&lt;/strong&gt;: As the number of images is very low and diversity among them is very high despite trying above mention steps it failed to converge properly&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
+    &lt;iframe src=&#34;https://player.vimeo.com/video/512209841?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-randomly-picked-samples&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://levindabhi.github.io/post/generating-amongus-characters/lego-grid_hu1ffa1daf74e7552429e1639eae38ead9_1769914_2000x2000_fit_q90_lanczos.jpg&#34; data-caption=&#34;Randomly picked samples&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://levindabhi.github.io/post/generating-amongus-characters/lego-grid_hu1ffa1daf74e7552429e1639eae38ead9_1769914_2000x2000_fit_q90_lanczos.jpg&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;6144&#34; height=&#34;4096&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Randomly picked samples
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;ul&gt;
+&lt;li&gt;🐦&lt;a href=&#34;https://twitter.com/DabhiLevin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Thank you for reading, if you want to comment or have any suggestions feel free to ping me on twitter.&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Generating different styles from stylegan</title>
@@ -1050,7 +1280,7 @@ Projected image of each actor/actress into FFHQ latent space to find the closest
 &lt;h3 id=&#34;exploration-of-cartoon-latent-space-with-music&#34;&gt;Exploration of cartoon latent space with music&lt;/h3&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This looks so amazing. Visualizing &lt;a href=&#34;https://twitter.com/Norod78?ref_src=twsrc%5Etfw&#34;&gt;@Norod78&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/Buntworthy?ref_src=twsrc%5Etfw&#34;&gt;@Buntworthy&lt;/a&gt; &amp;#39;s &lt;a href=&#34;https://twitter.com/hashtag/toonify?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#toonify&lt;/a&gt; with music effect. Sync in the middle is so perfect. &lt;br&gt;&lt;br&gt;(Turn on sound if you haven&amp;#39;t ;)) &lt;a href=&#34;https://t.co/UL4H3RlVZi&#34;&gt;pic.twitter.com/UL4H3RlVZi&lt;/a&gt;&lt;/p&gt;&amp;mdash; Levin Dabhi (@DabhiLevin) &lt;a href=&#34;https://twitter.com/DabhiLevin/status/1314588673669697541?ref_src=twsrc%5Etfw&#34;&gt;October 9, 2020&lt;/a&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;This looks so amazing. Visualizing &lt;a href=&#34;https://twitter.com/Norod78?ref_src=twsrc%5Etfw&#34;&gt;@Norod78&lt;/a&gt; and &lt;a href=&#34;https://twitter.com/Buntworthy?ref_src=twsrc%5Etfw&#34;&gt;@Buntworthy&lt;/a&gt; &amp;#39;s &lt;a href=&#34;https://twitter.com/hashtag/toonify?src=hash&amp;amp;ref_src=twsrc%5Etfw&#34;&gt;#toonify&lt;/a&gt; with music effect. Sync in the middle is so perfect. &lt;br&gt;&lt;br&gt;(Turn on sound if you haven&amp;#39;t ;)) &lt;a href=&#34;https://t.co/UL4H3RlVZi&#34;&gt;pic.twitter.com/UL4H3RlVZi&lt;/a&gt;&lt;/p&gt;&amp;mdash; Levin (@DabhiLevin) &lt;a href=&#34;https://twitter.com/DabhiLevin/status/1314588673669697541?ref_src=twsrc%5Etfw&#34;&gt;October 9, 2020&lt;/a&gt;&lt;/blockquote&gt;
 &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
 
 Used &amp;lsquo;Culture Shock&amp;rsquo; stylegan visualizer with some modifications.&lt;/p&gt;
