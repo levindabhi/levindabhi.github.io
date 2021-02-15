@@ -762,19 +762,18 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>After one of my <a href="https://twitter.com/DabhiLevin/status/1355241279765028874?s=20" target="_blank" rel="noopener">tweet</a> went semi-viral, I motivated myself to put together the results of my stylegan2-ADA experiment in this post. Adding augmentation in discriminator of stylegan2 was cherry on the cake if one wants to train stylegan2 for the limited number of images. <br></p>
-<p>In <a href="https://arxiv.org/abs/2006.06676" target="_blank" rel="noopener">StyleganADA paper</a> authors explored small datasets with around 2000 to 1500 images. I decided to find the lower limit and trained on a few hundred images.</p>
-<p>I trained on three categories namely teddy bear faces, amongus characters, lego images. I used the original stylegan2-ADA repo TensorFlow version for training.
-Main points that make the training successful without mode collapse are</p>
+      <p>After one of my <a href="https://twitter.com/DabhiLevin/status/1355241279765028874?s=20" target="_blank" rel="noopener">tweet</a> went semi-viral, I motivated myself to put together the results of my stylegan2-ADA experiment in this post. Addition of augmentation in the discriminator of stylegan2 proved to be the cherry on the cake if one wants to train stylegan2 for a limited number of images. <br></p>
+<p>In the <a href="https://arxiv.org/abs/2006.06676" target="_blank" rel="noopener">StyleganADA paper</a> paper authors explore small datasets with around 1500-2000 images. I took up the task of finding the lower limit and train on a few hundred images.</p>
+<p>I trained on three categories namely teddy bear faces, AmongUs characters and Lego images. I used the original stylegan2-ADA repo (TensorFlow version) for training. Main points that make the training successful without mode collapse are</p>
 <ol>
 <li><strong>Right Initial point</strong>
 Fine-tuning from weight file which is close to your data helps a lot</li>
 <li><strong>Augmentation Strength</strong>
-If your dataset contains a few hundred images it better to start with high <a href="https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/training/augment.py#L31" target="_blank" rel="noopener">augment strength</a> and keep <a href="https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L540" target="_blank" rel="noopener">target</a> low to ramp up augment strength speedily.</li>
+If your dataset contains a few hundred images it is better to start with high <a href="https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/training/augment.py#L31" target="_blank" rel="noopener">augment strength</a> and keep <a href="https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L540" target="_blank" rel="noopener">target</a> low to speedily ramp up the augment strength.</li>
 <li><strong>Learning rate and Gamma</strong>
-Its better to explore few values <a href="https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L162" target="_blank" rel="noopener">Learning rate</a> and <a href="https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L534" target="_blank" rel="noopener">Gamma</a> before starting full training. Also, try different values when mode collapse occurs.</li>
+Its better to explore few values <a href="https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L162" target="_blank" rel="noopener">Learning rate</a> and <a href="https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L534" target="_blank" rel="noopener">Gamma</a> before starting full training. Also, it is recommended to try different values when mode collapse occurs.</li>
 </ol>
-<p>Below are details of a dataset, weight file link and results of each category. Hope you have a fun time watching results!</p>
+<p>Below are details of a dataset, weight file link and results of each category. Hope you have a fun time watching the results!</p>
 <h1 id="teddy-bear-face"><strong>Teddy Bear face</strong></h1>
 <ul>
 <li>Dataset: <a href="https://github.com/levindabhi/teddy-bear-dataset" target="_blank" rel="noopener">Teddy bear dataset</a></li>
@@ -932,7 +931,7 @@ Turn on audio 🔊🎧 for best experience. Above video is generated from <a hre
 <li>No of Images: 31</li>
 <li>pkl file link: <a href="https://drive.google.com/uc?id=1RBkUXCZQqekZQLdgMdE6pboGm3_kyOrH" target="_blank" rel="noopener">google drive</a></li>
 </ul>
-<p><strong>Failure case</strong>: As the number of images is very low and diversity among them is very high despite trying above mention steps it failed to converge properly.</p>
+<p><strong>Failure case</strong>: As the number of images are very low and diversity among them is very high, despite trying above mention steps it failed to converge properly.</p>
 <div style="position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;">
     <iframe src="https://player.vimeo.com/video/512209841?amp;loop=1amp;showinfo=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="vimeo video" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
