@@ -17,31 +17,28 @@
       <link>https://levindabhi.github.io/post/generating-amongus-characters/</link>
       <pubDate>Sun, 07 Feb 2021 21:56:38 +0530</pubDate>
       <guid>https://levindabhi.github.io/post/generating-amongus-characters/</guid>
-      <description>&lt;p&gt;After one of my &lt;a href=&#34;https://twitter.com/DabhiLevin/status/1355241279765028874?s=20&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tweet&lt;/a&gt; went semi-viral, I motivated myself to put together the results of my stylegan2-ADA experiment in this post. Adding augmentation in discriminator of stylegan2 was cherry on the cake if one wants to train stylegan2 for the limited number of images. &lt;br&gt;&lt;/p&gt;
-&lt;p&gt;In &lt;a href=&#34;https://arxiv.org/abs/2006.06676&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StyleganADA paper&lt;/a&gt; authors explored small datasets with around 2000 to 1500 images. I decided to find the lower limit and trained on a few hundred images.&lt;/p&gt;
-&lt;p&gt;I trained on three categories namely teddy bear faces, amongus characters, lego images. I used the original stylegan2-ADA repo TensorFlow version for training.
-Main points that make the training successful without mode collapse are&lt;/p&gt;
+      <description>&lt;p&gt;After one of my &lt;a href=&#34;https://twitter.com/DabhiLevin/status/1355241279765028874?s=20&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tweet&lt;/a&gt; went semi-viral, I motivated myself to put together the results of my stylegan2-ADA experiment in this post. Addition of augmentation in the discriminator of stylegan2 proved to be the cherry on the cake if one wants to train stylegan2 for a limited number of images. &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;In the &lt;a href=&#34;https://arxiv.org/abs/2006.06676&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StyleganADA paper&lt;/a&gt; authors explore small datasets with around 1500-2000 images. I took up the task of finding the lower limit and train on a few hundred images.&lt;/p&gt;
+&lt;p&gt;I trained on three categories namely teddy bear faces, AmongUs characters and Lego images. I used the original stylegan2-ADA repo (TensorFlow version) for training. Main points that make the training successful without mode collapse are&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Right Initial point&lt;/strong&gt;
 Fine-tuning from weight file which is close to your data helps a lot&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Augmentation Strength&lt;/strong&gt;
-If your dataset contains a few hundred images it better to start with high &lt;a href=&#34;https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/training/augment.py#L31&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;augment strength&lt;/a&gt; and keep &lt;a href=&#34;https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L540&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;target&lt;/a&gt; low to ramp up augment strength speedily.&lt;/li&gt;
+If your dataset contains a few hundred images it is better to start with high &lt;a href=&#34;https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/training/augment.py#L31&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;augment strength&lt;/a&gt; and keep &lt;a href=&#34;https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L540&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;target&lt;/a&gt; low to speedily ramp up the augment strength.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Learning rate and Gamma&lt;/strong&gt;
-Its better to explore few values &lt;a href=&#34;https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L162&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learning rate&lt;/a&gt; and &lt;a href=&#34;https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L534&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gamma&lt;/a&gt; before starting full training. Also, try different values when mode collapse occurs.&lt;/li&gt;
+Its better to explore few values &lt;a href=&#34;https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L162&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learning rate&lt;/a&gt; and &lt;a href=&#34;https://github.com/NVlabs/stylegan2-ada/blob/1ea5f6fa58108ca9fb94140320a1cdf515c1e246/train.py#L534&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gamma&lt;/a&gt; before starting full training. Also, it is recommended to try different values when mode collapse occurs.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;Below are details of a dataset, weight file link and results of each category. Hope you have a fun time watching results!&lt;/p&gt;
+&lt;p&gt;Below are details of a dataset, weight file link and results of each category. Hope you have a fun time watching the results!&lt;/p&gt;
 &lt;h1 id=&#34;teddy-bear-face&#34;&gt;&lt;strong&gt;Teddy Bear face&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Dataset: &lt;a href=&#34;https://github.com/levindabhi/teddy-bear-dataset&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Teddy bear dataset&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;No of Images: 637&lt;/li&gt;
 &lt;li&gt;pkl file link: &lt;a href=&#34;https://drive.google.com/uc?id=1sabVOgLiuOEs12hwP1ju5MX3WOaykWFL&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;google drive&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Here is latent space exploration
 &lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/509455270?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
-&lt;/p&gt;
-&lt;p&gt;Randomly picked sample
+
 
 
 
@@ -83,7 +80,7 @@ Its better to explore few values &lt;a href=&#34;https://github.com/NVlabs/style
 
 
 &lt;/figure&gt;
-&lt;/p&gt;
+
 &lt;h1 id=&#34;amongus-characters&#34;&gt;&lt;strong&gt;AmongUS Characters&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Dataset: Scrapped from &lt;a href=&#34;https://www.citypng.com/search?q=among&amp;#43;us&amp;#43;png&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;citypng.com&lt;/a&gt;&lt;/li&gt;
@@ -182,14 +179,14 @@ Its better to explore few values &lt;a href=&#34;https://github.com/NVlabs/style
     &lt;iframe src=&#34;https://player.vimeo.com/video/512202396?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
-Above video is generated from &lt;a href=&#34;https://gist.github.com/rolux/48f1da6cf2bc6ca5833dbacbf852b348&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Culture Shock&lt;/a&gt; with modifications. Music is from &lt;a href=&#34;https://www.youtube.com/watch?v=z5LS4kqJjKo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this youtube video&lt;/a&gt;.&lt;/p&gt;
+Turn on audio 🔊🎧 for best experience. Above video is generated from &lt;a href=&#34;https://gist.github.com/rolux/48f1da6cf2bc6ca5833dbacbf852b348&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Culture Shock&lt;/a&gt; with modifications. Music is from &lt;a href=&#34;https://www.youtube.com/watch?v=z5LS4kqJjKo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this youtube video&lt;/a&gt;.&lt;/p&gt;
 &lt;h1 id=&#34;lego-images&#34;&gt;&lt;strong&gt;Lego images&lt;/strong&gt;&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;Dataset: Scrapped from &lt;a href=&#34;https://brickset.com/minifigs/category-Spider-Man&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;brickset.com&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;No of Images: 31&lt;/li&gt;
 &lt;li&gt;pkl file link: &lt;a href=&#34;https://drive.google.com/uc?id=1RBkUXCZQqekZQLdgMdE6pboGm3_kyOrH&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;google drive&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Failure case&lt;/strong&gt;: As the number of images is very low and diversity among them is very high despite trying above mention steps it failed to converge properly&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Failure case&lt;/strong&gt;: As the number of images are very low and diversity among them is very high, despite trying above mention steps it failed to converge properly.&lt;/p&gt;
 &lt;div style=&#34;position: relative; padding-bottom: 86.25%; height: 0; overflow: hidden;&#34;&gt;
     &lt;iframe src=&#34;https://player.vimeo.com/video/512209841?amp;loop=1amp;showinfo=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
@@ -247,7 +244,7 @@ Above video is generated from &lt;a href=&#34;https://gist.github.com/rolux/48f1
       <link>https://levindabhi.github.io/post/generating-different-styles/</link>
       <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
       <guid>https://levindabhi.github.io/post/generating-different-styles/</guid>
-      <description>&lt;p&gt;Blending of different models in stylegan was first introduced by &lt;a href=&#34;https://www.justinpinkney.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Justin Pinkney&lt;/a&gt; in his post: &lt;a href=&#34;https://www.justinpinkney.com/stylegan-network-blending&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StyleGAN network blending&lt;/a&gt;. The fundamental idea he proposed was was swapping layers between two models. A base model trained on any dataset is blended with another model which is fine-tuned on the base model. For blending, few layers from the base model are swapped with the same layers of the fine-tuned model or vice-versa.&lt;/p&gt;
+      <description>&lt;p&gt;Blending of different models in stylegan was first introduced by &lt;a href=&#34;https://www.justinpinkney.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Justin Pinkney&lt;/a&gt; in his post: &lt;a href=&#34;https://www.justinpinkney.com/stylegan-network-blending&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StyleGAN network blending&lt;/a&gt;. The fundamental idea he proposed was swapping layers between two models. A base model trained on any dataset is blended with another model which is fine-tuned on the base model. For blending, few layers from the base model are swapped with the same layers of the fine-tuned model or vice-versa.&lt;/p&gt;
 &lt;p&gt;This lets one control what type of features one want from each model. Here in the post &lt;a href=&#34;https://www.justinpinkney.com/ukiyoe-yourself&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ukiyo-e Yourself&lt;/a&gt;, Justin swapped higher resolution layers from stylegan2 trained on FFHQ dataset with higher resolution layers from model fine-tuned on Ukiyo-e photos. Here low-level features like pose, eyes, nose and other details are from FFHQ model and high-level features like texture, skin colour is from a fine-tuned model.&lt;/p&gt;
 &lt;p&gt;After Justin open-sourced his &lt;a href=&#34;https://colab.research.google.com/drive/1tputbmA9EaXs9HL9iO21g7xN7jz_Xrko?usp=sharing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;colab notebook&lt;/a&gt; to blend different model of stylegan2, people tried many different styles and got interesting results. Here are some of the blended models details with few results.&lt;/p&gt;
 &lt;h1 id=&#34;painting&#34;&gt;&lt;strong&gt;Painting&lt;/strong&gt;&lt;/h1&gt;
